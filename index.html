@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pocket Meadow</title><link rel="icon" type="image/png" href="assets/icon.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#b9d7ad"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Pocket Meadow"><style>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Pocket Meadow</title><link rel="icon" type="image/png" href="assets/icon.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#b9d7ad"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Pocket Meadow"><style>
 *{box-sizing:border-box}html,body{height:100%}body{margin:0;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#30483a;background:#e9e4cd}button{font:inherit}.app{height:100%;display:grid;grid-template-rows:auto 1fr auto;gap:8px;padding:10px;max-width:1200px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center}.top-actions{display:flex;align-items:center;gap:7px}.prefs{display:flex;gap:5px}.pref{border:1px solid #fff;border-radius:12px;padding:7px 9px;background:#ffffffaa;color:#526858;font-weight:900;cursor:pointer;min-width:42px}.top h1{margin:0;font-size:clamp(22px,4vw,34px);letter-spacing:-.05em}.top p{margin:2px 0;color:#718277;font-size:12px}.stats{display:flex;gap:7px}.stat{min-width:68px;text-align:center;padding:7px 10px;border-radius:14px;background:#ffffffaa;border:1px solid #fff}.stat small{display:block;color:#77877b}.stage{position:relative;min-height:0;overflow:hidden;border-radius:28px;background:#b9d7ad;border:1px solid #fff;box-shadow:0 22px 60px #49614d22}canvas{width:100%;height:100%;display:block;touch-action:none}.tabs,.tools{position:absolute;z-index:2;display:flex;gap:5px;padding:5px;border-radius:15px;background:#fff9edcf;backdrop-filter:blur(9px)}.tabs{left:50%;top:12px;transform:translateX(-50%)}.tools{left:50%;bottom:12px;transform:translateX(-50%);flex-wrap:wrap;justify-content:center}.tab,.tool{border:0;border-radius:10px;padding:7px 10px;background:transparent;color:#607568;font-weight:800;cursor:pointer}.tab.active,.tool.active{background:#fff;color:#426448;box-shadow:0 5px 14px #44634b22}.tab.locked{opacity:.4}.tool small{display:block;font-size:8px;color:#87968b}.card{position:absolute;z-index:2;padding:10px 12px;border-radius:15px;background:#fff9ede6;color:#617366;font-size:11px;backdrop-filter:blur(9px)}.goal{left:14px;top:58px;width:min(310px,48%);max-height:68%;overflow:auto;pointer-events:none;transition:opacity .16s}.goal.fade{opacity:.13}.goal.closed{display:none}.goal button{pointer-events:auto}.goal-toggle{position:absolute;left:14px;top:14px;z-index:5;border:0;border-radius:12px;padding:9px 12px;background:#fff9ede8;color:#506a57;font-weight:900}.side-btn{position:absolute;right:14px;z-index:5;border:0;border-radius:12px;padding:9px 12px;background:#fff9ede8;color:#566f5d;font-weight:900}.undo-btn{bottom:200px}.cleanup-btn{bottom:150px}.cleanup-panel{position:absolute;right:14px;bottom:195px;z-index:7;width:250px;padding:12px;border-radius:15px;background:#fff9edf5}.cleanup-panel.hidden{display:none}.cleanup-panel button{width:100%;margin-top:6px;border:0;border-radius:9px;padding:7px;background:#fff;color:#55705e;font-weight:800}.line{display:flex;justify-content:space-between;margin-top:4px}.ok{color:#4d8058}.bad{color:#a15f5f}.contract{margin-top:7px;padding:8px;border-radius:10px;background:#fff8e9}.contract-tip{margin-top:7px;padding:7px;border-radius:9px;background:#edf2e5;color:#506756}.goal b,.hint b{display:block;color:#45634c}.bar{height:6px;margin-top:6px;border-radius:9px;background:#627a671a;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#83b889,#efca6f)}.visitors{right:14px;top:14px;max-width:190px}.journal{position:absolute;right:14px;bottom:100px;z-index:2;border:0;border-radius:14px;padding:10px 13px;background:#fff9eddf;color:#55705e;font-weight:900;cursor:pointer}.toast,.celebrate{position:absolute;left:50%;z-index:7;pointer-events:none;opacity:0}.toast{top:70px;transform:translate(-50%,-8px);padding:8px 13px;border-radius:99px;background:#fffaf0;color:#58705f;font-size:12px;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.celebrate{top:28%;transform:translate(-50%,-50%) scale(.8);font-size:clamp(24px,5vw,42px);font-weight:950;color:#fff;text-shadow:0 5px 20px #36503d88}.celebrate.show{animation:pop 1.1s}@keyframes pop{25%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}100%{opacity:0;transform:translate(-50%,-75%) scale(1.1)}}.modal{position:absolute;inset:0;z-index:10;display:grid;place-items:center;padding:18px;background:#344d3b55;backdrop-filter:blur(6px)}.modal.hidden{display:none}.panel{width:min(94%,700px);max-height:82%;overflow:auto;padding:20px;border-radius:23px;background:#fff9ed;box-shadow:0 25px 70px #283e2e55}.panel h2{margin:0}.journal-current{margin:10px 0 13px;padding:9px 11px;border-radius:12px;background:#e8efe3;color:#526858;font-size:12px}.journal-current b{color:#365740}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:8px;margin:13px 0}.entry,.achievement,.research{padding:10px;border-radius:13px;background:#f1e8d7}.entry{display:grid;grid-template-columns:48px 1fr;align-items:center;gap:8px;min-height:70px}.entry canvas{width:48px;height:58px;display:block}.entry.variant{grid-template-columns:48px 1fr}.entry-text{min-width:0;overflow-wrap:break-word;word-break:normal}.entry-text b{display:block}
 html[lang="en"] .grid{grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
 html[lang="en"] .entry{grid-template-columns:44px minmax(0,1fr);gap:10px;min-height:82px;align-items:center}
@@ -321,7 +321,250 @@ html.immersive #immersiveExit{
   cursor:pointer;
 }
 
-</style></head><body><div class="app"><header class="top"><div><h1 id="gameTitle">Pocket Meadow</h1><p id="gameSubtitle">探索栖息地、完成生态研究、寻找稀有变种。</p></div><div class="top-actions"><div class="stats"><div class="stat" id="plantStat"><small id="plantStatLabel">当前株数</small><b id="nPlant">0</b></div><div class="stat" id="speciesStat"><small id="speciesStatLabel">当前种数</small><b id="nSpecies">0</b></div><div class="stat" id="foundStat"><small id="foundStatLabel">基础图鉴</small><b id="nFound">0</b></div><div class="stat" id="researchStat"><small id="researchStatLabel">生态研究</small><b id="nResearch">0</b></div></div><div class="prefs"><button class="pref" id="fullscreenBtn" title="全屏">⛶</button><button class="pref" id="soundBtn" title="声音">🔊</button><button class="pref" id="langBtn" title="Language">EN</button></div></div></header><main class="stage"><canvas id="c"></canvas><button id="immersiveExit" aria-label="Exit fullscreen">✕</button>
+/* Phone portrait is an orientation gate, never a compressed game layout. */
+#rotateOverlay{display:none}
+@media (max-width:700px) and (orientation:portrait){
+  html,body{width:100vw;height:100dvh;min-height:100dvh;overflow:hidden}
+  body{background:linear-gradient(165deg,#dfead3 0%,#f1ddc4 100%)}
+  body>.app{visibility:hidden!important;pointer-events:none!important}
+  #rotateOverlay{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    width:100vw;
+    height:100dvh;
+    padding:
+      calc(env(safe-area-inset-top) + 24px)
+      calc(env(safe-area-inset-right) + 24px)
+      calc(env(safe-area-inset-bottom) + 24px)
+      calc(env(safe-area-inset-left) + 24px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .rotate-device-inner{display:grid;justify-items:center;gap:18px}
+  .rotate-device-title{margin:0;font-size:clamp(28px,8vw,38px);letter-spacing:-.045em}
+  .rotate-device-icon{font-size:58px;line-height:1;animation:rotate-hint 2.4s ease-in-out infinite}
+  .rotate-device-copy{margin:0;color:#607568;font-size:17px;font-weight:800}
+  #rotateOverlay .zh,#rotateOverlay .en{display:none}
+  html[lang="zh-CN"] #rotateOverlay .zh,html[lang="en"] #rotateOverlay .en{display:block}
+}
+@keyframes rotate-hint{0%,100%{transform:rotate(0)}50%{transform:rotate(90deg)}}
+
+/* Dedicated phone landscape HUD. Short-height landscape is the reliable phone signal. */
+@media (orientation:landscape) and (max-height:500px){
+  :root{
+    --safe-t:env(safe-area-inset-top,0px);
+    --safe-r:env(safe-area-inset-right,0px);
+    --safe-b:env(safe-area-inset-bottom,0px);
+    --safe-l:env(safe-area-inset-left,0px);
+    --hud-top:calc(var(--safe-t) + 6px);
+    --hud-h:38px;
+    --tool-h:42px;
+  }
+  html,body{width:100vw;height:100dvh;min-height:100dvh;margin:0;overflow:hidden}
+  #rotateOverlay{display:none!important}
+  body>.app{visibility:visible!important}
+  .app,html.immersive .app{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100dvh;
+    max-width:none;
+    margin:0;
+    padding:0;
+    gap:0;
+    display:grid;
+    grid-template-rows:1fr;
+  }
+  footer,html.immersive footer{display:none}
+  .stage,html.immersive .stage{
+    width:100vw;
+    height:100dvh;
+    min-height:0;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+  .top,html.immersive .top{
+    display:block;
+    position:fixed;
+    inset:0;
+    z-index:18;
+    width:auto;
+    pointer-events:none;
+  }
+  .top>div:first-child,html.immersive .top>div:first-child{display:none}
+  .top-actions,html.immersive .top-actions{display:contents}
+  .stats,html.immersive .stats{
+    position:fixed;
+    top:var(--hud-top);
+    left:calc(var(--safe-l) + 6px);
+    width:calc(36vw - var(--safe-l));
+    height:var(--hud-h);
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:3px;
+    pointer-events:auto;
+  }
+  .stat,html.immersive .stat{
+    min-width:0;
+    height:var(--hud-h);
+    padding:3px 2px;
+    border-radius:9px;
+    font-size:10px;
+    line-height:1.05;
+    overflow:hidden;
+  }
+  .stat small,html.immersive .stat small{
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:7px;
+    line-height:1.1;
+  }
+  .prefs,html.immersive .prefs{
+    position:fixed;
+    top:var(--hud-top);
+    right:calc(var(--safe-r) + 6px);
+    width:calc(18vw - var(--safe-r));
+    height:var(--hud-h);
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:3px;
+    pointer-events:auto;
+  }
+  .pref,html.immersive .pref{
+    min-width:0;
+    height:var(--hud-h);
+    padding:0;
+    border-radius:9px;
+    font-size:10px;
+  }
+  .tabs,html.immersive .tabs{
+    position:fixed;
+    top:var(--hud-top);
+    left:38vw;
+    right:auto;
+    width:30vw;
+    height:var(--hud-h);
+    transform:none;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:2px;
+    padding:3px;
+    border-radius:10px;
+  }
+  .tab,html.immersive .tab{
+    min-width:0;
+    padding:0 2px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    border-radius:7px;
+    font-size:9px;
+  }
+  #immersiveExit,html.immersive #immersiveExit{display:none}
+  .visitors{display:none}
+  .goal-toggle,html.immersive .goal-toggle{
+    position:fixed;
+    left:calc(var(--safe-l) + 7px);
+    top:calc(var(--hud-top) + var(--hud-h) + 7px);
+    z-index:8;
+    min-width:42px;
+    padding:7px 8px;
+    border-radius:9px;
+    font-size:0;
+  }
+  .goal-toggle::after{content:"Goal";font-size:10px}
+  html[lang="zh-CN"] .goal-toggle::after{content:"目标"}
+  .goal,html.immersive .goal{
+    position:fixed;
+    left:calc(var(--safe-l) + 7px);
+    top:calc(var(--hud-top) + var(--hud-h) + 42px);
+    width:min(280px,48vw);
+    max-height:calc(100dvh - var(--safe-b) - var(--tool-h) - var(--hud-h) - 64px);
+    overflow:auto;
+    padding:9px 10px;
+    border-radius:11px;
+    font-size:9px;
+    pointer-events:none;
+  }
+  .goal.closed{display:none}
+  .side-btn,.journal{
+    position:fixed;
+    right:calc(var(--safe-r) + 7px);
+    z-index:8;
+    width:34px;
+    height:34px;
+    min-width:0;
+    padding:0;
+    border-radius:9px;
+    font-size:0;
+  }
+  .undo-btn,html.immersive .undo-btn{top:calc(var(--hud-top) + var(--hud-h) + 8px);bottom:auto}
+  .cleanup-btn,html.immersive .cleanup-btn{top:calc(var(--hud-top) + var(--hud-h) + 47px);bottom:auto}
+  .journal,html.immersive .journal{top:calc(var(--hud-top) + var(--hud-h) + 86px);bottom:auto}
+  .undo-btn::after{content:"↶";font-size:17px}
+  .cleanup-btn::after{content:"•••";font-size:11px;letter-spacing:-1px}
+  .journal::after{content:"📖";font-size:15px}
+  .cleanup-panel{
+    position:fixed;
+    right:calc(var(--safe-r) + 47px);
+    top:calc(var(--hud-top) + var(--hud-h) + 46px);
+    bottom:auto;
+    width:min(230px,40vw);
+    max-height:calc(100dvh - var(--safe-b) - var(--tool-h) - var(--hud-h) - 58px);
+    overflow:auto;
+    padding:9px;
+    font-size:9px;
+  }
+  .stage>.tools,html.immersive .stage>.tools{
+    position:fixed;
+    left:calc(env(safe-area-inset-left) + 8px);
+    right:calc(env(safe-area-inset-right) + 8px);
+    bottom:calc(var(--safe-b) + 5px);
+    width:auto!important;
+    height:var(--tool-h);
+    transform:none;
+    display:grid!important;
+    grid-template-columns:repeat(6,minmax(0,1fr))!important;
+    grid-template-rows:minmax(0,1fr)!important;
+    grid-auto-flow:column;
+    flex-wrap:nowrap!important;
+    gap:2px;
+    padding:3px;
+    overflow:hidden!important;
+    border-radius:11px;
+  }
+  .stage>.tools>.tool,html.immersive .stage>.tools>.tool{
+    width:100%!important;
+    min-width:0!important;
+    max-width:none;
+    box-sizing:border-box;
+    padding:3px 1px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    border-radius:8px;
+    font-size:clamp(8px,1.2vw,10px);
+  }
+  .stage>.tools>.tool small{display:none!important}
+  .toast{top:calc(var(--hud-top) + var(--hud-h) + 6px)}
+  .plant-tooltip{bottom:calc(var(--safe-b) + var(--tool-h) + 9px)}
+  .cultivate{top:calc(var(--hud-top) + var(--hud-h) + 7px)}
+  .panel{max-height:calc(100dvh - var(--safe-t) - var(--safe-b) - 18px)}
+}
+
+@media (display-mode:standalone){
+  html,body{width:100vw;height:100dvh;min-height:100dvh;margin:0;overflow:hidden}
+  .app{width:100vw;height:100dvh;max-width:none;margin:0}
+  footer{display:none}
+}
+
+</style></head><body><div id="rotateOverlay" class="rotate-device" aria-label="Rotate device"><div class="rotate-device-inner"><h1 class="rotate-device-title en">Pocket Meadow</h1><h1 class="rotate-device-title zh">掌中自然</h1><div class="rotate-device-icon" aria-hidden="true">↻</div><p class="rotate-device-copy en">Rotate your phone to play</p><p class="rotate-device-copy zh">请横屏游玩</p></div></div><div class="app"><header class="top"><div><h1 id="gameTitle">Pocket Meadow</h1><p id="gameSubtitle">探索栖息地、完成生态研究、寻找稀有变种。</p></div><div class="top-actions"><div class="stats"><div class="stat" id="plantStat"><small id="plantStatLabel">当前株数</small><b id="nPlant">0</b></div><div class="stat" id="speciesStat"><small id="speciesStatLabel">当前种数</small><b id="nSpecies">0</b></div><div class="stat" id="foundStat"><small id="foundStatLabel">基础图鉴</small><b id="nFound">0</b></div><div class="stat" id="researchStat"><small id="researchStatLabel">生态研究</small><b id="nResearch">0</b></div></div><div class="prefs"><button class="pref" id="fullscreenBtn" title="全屏">⛶</button><button class="pref" id="soundBtn" title="声音">🔊</button><button class="pref" id="langBtn" title="Language">EN</button></div></div></header><main class="stage"><canvas id="c"></canvas><button id="immersiveExit" aria-label="Exit fullscreen">✕</button>
 <div class="tabs" id="zones"><button class="tab active" data-z="meadow">草甸</button><button class="tab locked" data-z="wetland">湿地 🔒</button><button class="tab locked" data-z="hill">山坡 🔒</button></div>
 <button class="goal-toggle" id="goalToggle">× 收起目标</button><div class="card goal" id="goal"></div><div class="card visitors" id="visitors">花园还很安静。</div><button class="side-btn undo-btn" id="undoBtn" disabled>↶ 撤销</button><button class="side-btn cleanup-btn" id="cleanupBtn">智能整理</button><div class="cleanup-panel hidden" id="cleanupPanel"><b id="cleanupTitle">整理当前栖息地</b><div id="cleanupSummary"></div><button id="removeDominant">移除最多物种的一株</button><button id="keepOne">每种只保留一株</button><button id="removeResources">移除多余环境标记</button><button id="closeCleanup">关闭</button></div><button class="journal" id="journal">探索图鉴</button><div class="plant-tooltip hidden" id="plantTooltip"></div><div class="cultivate hidden" id="cultivate"></div><div class="toast" id="toast"></div><div class="celebrate" id="celebrate"></div>
 <div class="tools" id="tools"><button class="tool active" data-t="seed">🌱 种子<small>点击土地</small></button><button class="tool" data-t="water">💧 水滴<small>湿润附近</small></button><button class="tool" data-t="stone">🪨 石头<small>改变环境</small></button><button class="tool" data-t="sun">☀️ 阳光<small>温暖一片</small></button><button class="tool" data-t="move">✥ 移动<small>整理空间</small></button><button class="tool" data-t="remove">⌫ 移除<small>腾出空间</small></button></div>
@@ -484,9 +727,6 @@ async function enterImmersive(){
     let req=el.requestFullscreen||el.webkitRequestFullscreen;
     if(req) await req.call(el);
   }catch(e){}
-  try{
-    if(screen.orientation&&screen.orientation.lock) await screen.orientation.lock('landscape');
-  }catch(e){}
   setTimeout(resize,60);
 }
 async function exitImmersive(){
@@ -494,9 +734,6 @@ async function exitImmersive(){
   try{
     let ex=document.exitFullscreen||document.webkitExitFullscreen;
     if(isNativeFullscreen()&&ex) await ex.call(document);
-  }catch(e){}
-  try{
-    if(screen.orientation&&screen.orientation.unlock) screen.orientation.unlock();
   }catch(e){}
   setTimeout(resize,60);
 }
@@ -548,5 +785,6 @@ $('#start').onclick=()=>{ensureAudio();sfx('unlock');$('#intro').classList.add('
 $('#fullscreenBtn').onclick=()=>{ensureAudio();sfx('ui');toggleImmersive()};$('#immersiveExit').onclick=()=>{sfx('ui');exitImmersive()};$('#langBtn').onclick=()=>{ensureAudio();sfx('ui');lang=lang==='zh'?'en':'zh';localStorage.setItem(LANG_KEY,lang);setStaticLanguage()};
 $('#soundBtn').onclick=()=>{soundEnabled=!soundEnabled;localStorage.setItem(SOUND_KEY,soundEnabled?'on':'off');if(soundEnabled){ensureAudio();sfx('ui')}setStaticLanguage()};
 addEventListener('keydown',e=>{let i=['Digit1','Digit2','Digit3','Digit4','Digit5','Digit6'].indexOf(e.code);if(i>=0)$$('.tool')[i]?.click();if(e.code==='KeyR'&&confirm(lang==='zh'?'清空全部花园和进度？':'Reset the entire garden and all progress?')){S=blank();save()}});
-addEventListener('resize',resize);resize();unlockZones();progress();setStaticLanguage();save();requestAnimationFrame(draw)})();
+let mobileLandscapeActive=false;function syncMobileLayout(){let active=matchMedia('(orientation:landscape) and (max-height:500px)').matches;if(active&&!mobileLandscapeActive)$('#goal').classList.add('closed');mobileLandscapeActive=active}
+addEventListener('resize',()=>{syncMobileLayout();resize()});syncMobileLayout();resize();unlockZones();progress();setStaticLanguage();save();requestAnimationFrame(draw)})();
 </script></body></html>
